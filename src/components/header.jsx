@@ -8,7 +8,7 @@ const Header = ({ className }) => {
     document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
   return (
-    <div className={`${className} w-full sticky top-0 z-30`}>
+    <div className={`${className} w-full`}>
       <div className="space-y-2 flex flex-row items-center justify-between w-full bg-neutral-50 dark:bg-slate-900 rounded-xl mt-3 shadow-lg border border-neutral-200 dark:border-slate-800 p-6">
         <div className="flex items-center gap-2 w-full">
           <CircleCheck className="size-6 mt-2 text-primary" />
