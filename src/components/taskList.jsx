@@ -70,7 +70,7 @@ const TaskList = ({ className, listData, pageSize }) => {
         key: "actions",
         render: (_, record) => (
           <div className="flex gap-2">
-            <Button onClick={() => handleOpenEdit(record)}>Edit</Button>
+            <Button className="dark:bg-blue-200" onClick={() => handleOpenEdit(record)}>Edit</Button>
             <Popconfirm
               title="Delete this item?"
               onConfirm={() => handleDelete(record.id)}
