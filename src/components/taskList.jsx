@@ -44,7 +44,7 @@ const TaskList = ({ className, listData, pageSize }) => {
         dataIndex: "price",
         key: "price",
         sorter: (a, b) => a.price - b.price,
-        render: (value) => `$${value.toFixed(2)}`,
+        render: (value) => `${value.toFixed(2)}`,
       },
       {
         title: "Stock",
@@ -56,11 +56,7 @@ const TaskList = ({ className, listData, pageSize }) => {
         title: "Rating",
         dataIndex: "rating",
         key: "rating",
-        render: (rating) => (
-          <Tag color={rating >= 4 ? "green" : rating === 3 ? "orange" : "red"}>
-            {"★".repeat(rating)}
-          </Tag>
-        ),
+        render: (rating) => <span>{"★".repeat(rating)}</span>,
         sorter: (a, b) => a.rating - b.rating,
       },
       {
@@ -150,8 +146,8 @@ const TaskList = ({ className, listData, pageSize }) => {
               dataSource={dataTable}
               rowClassName={(_, index) =>
                 index % 2 === 0
-                  ? "bg-white hover:bg-gray-100"
-                  : "bg-blue-50 hover:bg-gray-100"
+                  ? "bg-white"
+                  : "bg-blue-50"
               }
               pagination={{
                 pageSize: pageSize ?? 10,
