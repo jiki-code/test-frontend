@@ -101,7 +101,7 @@ export const mockItems = [
   },
 
   {
-    id: 11,
+    id: 12,
     name: "naruto",
     category: "Kitchen",
     price: 15,
