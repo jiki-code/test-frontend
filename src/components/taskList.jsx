@@ -81,11 +81,7 @@ const TaskList = ({ className, listData, pageSize }) => {
               okText="Yes"
               cancelText="No"
             >
-              <Button
-                className="bg-red-500"
-              >
-                Delete
-              </Button>
+              <Button className="bg-red-500">Delete</Button>
             </Popconfirm>
           </div>
         ),
@@ -143,7 +139,6 @@ const TaskList = ({ className, listData, pageSize }) => {
     handleCloseEdit();
   };
 
-  
   return (
     <div className={`${className} w-full`}>
       <div className="space-y-4 flex flex-row items-center justify-between w-full bg-neutral-50  dark:bg-slate-900  rounded-xl mt-3 shadow-xl border border-neutral-200 p-6">
@@ -153,7 +148,12 @@ const TaskList = ({ className, listData, pageSize }) => {
               columns={columns}
               rowSelection={rowSelection}
               dataSource={dataTable}
-               pagination={{
+              rowClassName={(_, index) =>
+                index % 2 === 0
+                  ? "bg-white hover:bg-gray-100"
+                  : "bg-blue-50 hover:bg-gray-100"
+              }
+              pagination={{
                 pageSize: pageSize ?? 10,
                 hideOnSinglePage: true, // hide if only one page
               }}
@@ -182,7 +182,6 @@ const TaskList = ({ className, listData, pageSize }) => {
         onCancel={handleCloseEdit}
         onSave={handleSaveEdit}
       />
-
     </div>
   );
 };
