@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Header from "@/components/header";
 import FilterForm from "@/components/filterForm";
 import TaskList from "@/components/taskList";
-import TaskList from "@/components/footer";
 
 import { mockItems } from "../lib/table";
 function HomePage() {

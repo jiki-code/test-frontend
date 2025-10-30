@@ -6,7 +6,6 @@ import { categoryType } from "../lib/data";
 import EditItemModal from "../components/ui/editForm";
 
 const TaskList = ({ className, listData, pageSize }) => {
-  console.log("🚀 ~ TaskList ~ pageSize:", pageSize)
   const [dataTable, setDataTable] = React.useState([]);
   const [selectedRowKeys, setSelectedRowKeys] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
