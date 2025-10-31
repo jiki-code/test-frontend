@@ -11,7 +11,7 @@ const FilterForm = ({
     category: "",
     stock: false,
     rating: 0,
-    pagesize: "",
+    pagesize: 5,
   },
   // callback to parent
   onChange, // (nextForm) => void
@@ -108,7 +108,7 @@ const FilterForm = ({
           {/* Page size */}
           <div className="w-full flex flex-col">
             <label className="text-muted-foreground dark:text-white pb-1">
-              PageSize
+              Page size
             </label>
             <select
               name="pagesize"
