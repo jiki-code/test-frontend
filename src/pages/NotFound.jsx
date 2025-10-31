@@ -9,7 +9,12 @@ function NotFound() {
         className="max-w-full mb-6 w-96"
       />
       <p className="text-2xl font-bold">Not Data</p>
-      <a href="/" className="inline-block px-6 py-3 font-medium text-white rounded-xl transition shadow-md bg-primary hover:bg-primary-dark">Back HomePage</a>
+      <a
+        href="/"
+        className="inline-block px-6 py-3 font-medium text-white rounded-xl transition shadow-md bg-primary hover:bg-primary-dark"
+      >
+        Back HomePage
+      </a>
     </div>
   );
 }

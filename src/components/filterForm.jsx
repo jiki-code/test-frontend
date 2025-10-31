@@ -118,7 +118,7 @@ const FilterForm = ({
             >
               {pageSize.map((p, index) => (
                 <option key={index} value={p.value}>
-                  {p.value}
+                  {p.value} /page
                 </option>
               ))}
             </select>

@@ -11,7 +11,7 @@ function HomePage() {
     category: "",
     stock: 0,
     rating: 0,
-    pagesize: 10,
+    pagesize: 5,
   });
   useEffect(() => {
     const filtered = mockItems.filter((item) => {
@@ -46,7 +46,11 @@ function HomePage() {
           // here you can re-fetch or filter local data
         }}
       />
-      <TaskList className="p-3" listData={taskBuffer} pageSize={filter.pagesize} />
+      <TaskList
+        className="p-3"
+        listData={taskBuffer}
+        pageSize={filter.pagesize}
+      />
     </div>
   );
 }
