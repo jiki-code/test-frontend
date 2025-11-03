@@ -114,7 +114,7 @@ const FilterForm = ({
               name="pagesize"
               value={form.pagesize}
               onChange={handleInputChange}
-              className="border-1 bg-gray-50 dark:bg-neutral-600 border-neutral-200 dark:border-back rounded-xl p-2 text-sm"
+              className="border-1 bg-gray-50 dark:bg-neutral-900 border-neutral-200 dark:border-back rounded-xl p-2 text-sm"
             >
               {pageSize.map((p, index) => (
                 <option key={index} value={p.value}>
